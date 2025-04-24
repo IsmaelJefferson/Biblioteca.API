@@ -12,10 +12,8 @@ namespace Biblioteca.Domain.Entities
         public DateTime ArrivalDate { get; set; }
         public BookStatus Status { get; set; }
 
-        // Parameterless constructor for EF Core
         public Book() { }
 
-        // Constructor for easier instantiation
         public Book(string title, string author, string category, DateTime releaseDate, DateTime arrivalDate, BookStatus status)
         {
             Id = Guid.NewGuid();
@@ -26,10 +24,5 @@ namespace Biblioteca.Domain.Entities
             ArrivalDate = arrivalDate;
             Status = status;
         }
-
-        /*public static implicit operator Book(Book v)
-        {
-            throw new NotImplementedException();
-        }*/
     }
 }

@@ -1,0 +1,10 @@
+# Pasta bin e obj
+bin/
+obj/
+
+# Arquivos do Visual Studio
+.vs/
+.idea/
+
+# Outros arquivos temporários
+*.log

@@ -16,7 +16,7 @@ namespace Library.Infrastructure.Configurations
 
             builder.Property(u => u.Username)
                    .IsRequired()
-                   .HasMaxLength(100); // Ajuste conforme necessário
+                   .HasMaxLength(100);
 
             builder.Property(u => u.PasswordHash)
                    .IsRequired();
@@ -27,8 +27,7 @@ namespace Library.Infrastructure.Configurations
 
             builder.Property(u => u.PasswordSalt)
                    .IsRequired();
-
-            // Definir index único para Username (opcional, mas útil para performance)
+                   
             builder.HasIndex(u => u.Username).IsUnique();
         }
     }
